@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Css stuff</title>
     <style>
-        /* *{
+      /* *{
             margin: 0;
             padding: 0;
         }
@@ -13,7 +13,7 @@
             background-color: yellow;
             font-weight: bold;
         } */
-         /* div > p {
+      /* div > p {
             color: blue;
          }
          div ~ p{
@@ -28,74 +28,85 @@
          section {
             margin-bottom: 2rem;
          } */
-          
-        .box {
-            font-family: Arial, sans-serif;
-            background-color: #6ff5ff;
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center; /* Vertical centering */
-            align-items: center;     /* Horizontal centering */
-            padding: 20px;
-            border: 5px solid black;
-            
-            }
-        .table {
-            background-color: rgb(29, 255, 180);
-        }
-    </style>
-</head>
-<body >
+
+      .box {
+        font-family: Arial, sans-serif;
     
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* styling contents inside the box */
+        
+      }
+      .table {
+        background-color: rgb(29, 255, 180);
+      }
+      .background-box {
+        
+        /* styling the box itself */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>practicing descendants and other elements</h1>
+      <p>manadtory paragraph underneath the h1</p>
+      <hr />
+    </section>
+    <div class="background-box">
+      <div class="box">
+        <!-- so section inside divs are treated as bastard children -->
+        <div>
+          <p>direct paragraph</p>
+          <section>
+            <p>bastard paragraph</p>
+          </section>
+        </div>
+        <div>
+          <p class="Miku">Miku</p>
+          <p class="Teto">Teto</p>
+        </div>
+        <div>
+          <p>Len</p>
+          <p>Rin</p>
+        </div>
         <section>
-            <h1>practicing descendants and other elements</h1>
-            <p>manadtory paragraph underneath the h1</p>
-            <hr>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jonas</td>
+              <td>21</td>
+            </tr>
+            <tr>
+              <td>Barto</td>
+              <td>23</td>
+            </tr>
+          </table>
         </section>
-        <div class="box">
-            <!-- so section inside divs are treated as bastard childred -->
-            <div>
-                <p >direct paragraph</p>
-                <section>
-                    <p >bastard paragraph</p>
-                </section>
-            </div>
-            <div>
-                <p class="Miku">Miku</p>
-                <p class="Teto">Teto</p>
-            </div>
-            <div>
-                <p>Len</p>
-                <p>Rin</p>
-            </div>
-        <section>
-            <table >
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                </tr>
-                <tr>
-                    <td>Jonas</td>
-                    <td>21</td>
-                </tr>
-                <tr>
-                    <td>Barto</td>
-                    <td>23</td>
-                </tr>
-            </table>
+        <section class="iframe1">
+          <iframe
+            class="iframe2"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/aRGdDy18qfY?si=95Y6Ztf6MIC70CA1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
         </section>
-        <section>
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/aRGdDy18qfY?si=95Y6Ztf6MIC70CA1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </section>
-    </div> 
-</body>
+      </div>
+    </div>
+  </body>
 </html>
