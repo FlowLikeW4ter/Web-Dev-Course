@@ -10,7 +10,7 @@ body {
     grid-template-rows: 80px 1fr 60px;
     grid-template-areas: 
         "header header"
-        "sidebar sidebar"
+        "sidebar content"
         "footer footer";
     gap: 10px;
     height: 100vh;
